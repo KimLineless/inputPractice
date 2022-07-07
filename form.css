@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.joinD {
+    border: 1px solid red;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: auto;
+    font-size: 14px;
+}
+
+.joinD strong {
+    color: red;
+    font-size: 0.7rem;
+}
+
+.joinD h3 {
+    width: 100%;
+
+}
+
+.joinD>label,
+.joinD>div {
+    border-bottom: 1px solid lightgray;
+    margin-top: 1px;
+}
+
+.joinD>label {
+    display: block;
+    background-color: #999;
+    padding: 10px;
+    width: 200px;
+}
+
+.joinD>div {
+    width: calc(100% - 200px);
+    padding: 10px;
+}
+
+.joinD input {
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.joinD input:focus {
+    background-color: aliceblue;
+    border: none;
+}
+
+.joinD input[type=tel],
+.joinD input[name*=email]{
+    width: 100px;
+}
+
+
+.joinD p {
+    font-size: 10px;
+    color: darkgray;    
+    display: none;
+}
+
+input:focus~p {
+    display: block;
+}
+
+.joinD button {
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    height: 30px;
+}
+
+.joinD button:focus,
+.joinD button:hover {
+    background-color: darkseagreen;
+}
+
+.joinD .btns {
+    border: 1px solid red;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:800px) {
+
+    .joinD>label,
+    .joinD>div {
+        width: 100%;
+    }
+}

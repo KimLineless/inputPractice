@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="join.js" defer></script>
+</head>
+<body>
+    <form action="joinok.php" method="post" name="join_form">
+        <section class="joinD">
+            <h3>회원가입 입력양식</h3>
+            <label for="uid">아이디 <strong> *</strong></label>
+            <div>
+                <input type="text" id="uid">
+                <button onclick="id_check()">중복아이디 검색</button>
+                <p><strong>*</strong> 최소 8자 ~ 최대 20자를 입력하세요.</p>
+            </div>
+            <label for="u_name">이름<strong> *</strong></label>
+            <div>
+                <input type="text" id="u_name" value="김무선" disabled>
+            </div>
+            <label for="pwd">패스워드 <strong> *</strong></label>
+            <div>
+                <input type="password" name="pwd" id="pwd">
+                <p><strong>*</strong> 영문, 숫자, 특수문자 중 3종류 이상 조합. 최소 8자 ~ 최대 20자를 입력하세요.</p>
+            </div>
+            <label for="repwd">패스워드 확인<strong> *</strong></label>
+            <div>
+                <input type="password" name="repwd" id="repwd">
+            </div>
+            <label for="mobile">전화번호<strong> *</strong></label>
+            <div>   
+                <input type="tel" name="mobile1" id="mobile1"> -
+                <input type="tel" name="mobile2" id="mobile2"> -
+                <input type="tel" name="mobile3" id="mobile3">
+
+                <p><strong>*</strong> 핸드폰번호를 꼭 입력해주세요! (미입력시 회원가입이 정상적으로 되지않을 수 있습니다.)</p>
+                <p><strong>*</strong> 핸드폰번호를 입력하시면 민원처리가 원활히 진행될 수 있습니다.</p>
+            </div>
+            <label for="email_id">이메일<strong> *</strong></label>
+            <div>
+                <input type="text" name="email_id" id="email_id"> @
+                <input type="text" name="email_add" id="email_add">
+                <select name="email_sel" id="email_sel" onchange="change_email()">
+                    <option value="" selected>직접입력</option>
+                    <option value="naver.com">naver</option>
+                    <option value="gmail.com">gmail</option>
+                    <option value="nate.com">nate</option>
+                </select>
+            </div>
+            <div class="btns">
+                <button type="button" onclick="joinForm_check()">가입하기</button>
+                <button type="reset">취소하기</button>
+                <button type="button" onclick="history.back()">이전페이지</button>
+            </div>
+        </section>
+    </form>
+</body>
+</html> 
